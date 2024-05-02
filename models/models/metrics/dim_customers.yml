@@ -25,7 +25,10 @@ semantic_models:
     measures:
       - name: count_lifetime_orders
         description: Total count of orders per customer.
-        agg: sum
+        agg: percentile
+        agg_params:
+          percentile: .99
+          use_discrete_percentile: False
       - name: lifetime_spend
         agg: sum
         description: Gross customer lifetime spend inclusive of taxes.

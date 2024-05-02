@@ -64,6 +64,8 @@ metrics:
     type_params:
       numerator: order_total
       denominator: order_count
+    filter: |
+      {{ TimeDimension('order_id__order_date', 'day') }}
   # Cumulative type metrics
   - name: "cumulative_order_amount_mtd"
     label: "cumulative_order_amount_mtd"
