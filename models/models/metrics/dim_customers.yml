@@ -34,8 +34,6 @@ semantic_models:
         agg: count_distinct
 metrics:
   - name: "customers"
-    owners:
-      - support@getdbt.com
     description: "Count of customers"
     type: simple
     label: "customers"
