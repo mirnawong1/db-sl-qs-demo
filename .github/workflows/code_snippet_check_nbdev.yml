@@ -26,7 +26,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install nbdev
-        nbdev_install_git_hooks
+        nbdev_install_hooks
 
     - name: Test documentation build for metricflow.
       run: |
