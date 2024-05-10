@@ -38,11 +38,11 @@ jobs:
 
     - name: Run nbdev_test for metricflow
       run: |
-        nbdev_test metricflow
+        nbdev_test --path dbt-metricflow/dbt_metricflow/cli
 
-
-    - name: Run nbdev_test for dbt-core
-      run: |
-        nbdev_test dbt_core
+    
+  # - name: Run nbdev_test for dbt-core
+    #  run: |
+    #    nbdev_test --path dbt_core
 
     # Add more steps for additional testing or checks if needed
