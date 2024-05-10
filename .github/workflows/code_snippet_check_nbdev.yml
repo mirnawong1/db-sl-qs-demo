@@ -22,7 +22,15 @@ jobs:
       run: |
         git clone https://github.com/dbt-labs/metricflow.git
         git clone https://github.com/dbt-labs/dbt-core.git
+    
+    - name: Upgrade setuptools
+      run: pip install --upgrade setuptools 
 
+    - name: Clear Python package cache
+      run: |
+        rm -rf ~/.cache/pip
+        rm -rf ./.venv  # If you have a virtual environment
+        
     - name: Install dependencies
       run: |
         pip install nbdev
