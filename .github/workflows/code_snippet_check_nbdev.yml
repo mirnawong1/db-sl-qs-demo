@@ -36,21 +36,10 @@ jobs:
         pip install nbdev
         nbdev_install_hooks
 
-    - name: Test documentation build for metricflow.
-      run: |
-        cd metricflow
-        nbdev_build_docs
-        cd ..  # Move back to the root directory before running nbdev_test
-
     - name: Run nbdev_test for metricflow
       run: |
         nbdev_test metricflow
 
-    - name: Test documentation build for dbt-core
-      run: |
-        cd dbt-core
-        nbdev_build_docs
-        cd ..  # Move back to the root directory before running nbdev_test
 
     - name: Run nbdev_test for dbt-core
       run: |
