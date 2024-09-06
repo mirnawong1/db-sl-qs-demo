@@ -7,3 +7,7 @@ sources:
    tables:
      - name: customers
      - name: orders
+
+models:
+  - name: jaffle_shop
+    tags: ['super_mario']
