@@ -1,5 +1,5 @@
 semantic_models:
-  - name: dim_customers_test_for_explorer
+  - name: dim_customers_test_for_parse
     defaults:
       agg_time_dimension: most_recent_order_date
     description: |
@@ -33,7 +33,7 @@ semantic_models:
         expr: customer_id
         agg: count_distinct
 metrics:
-  - name: "customers_for_explorer"
+  - name: "customers_for_parse"
     description: "Count of customers"
     type: simple
     label: "customers"
